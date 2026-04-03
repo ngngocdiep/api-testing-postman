@@ -1,0 +1,6677 @@
+{
+	"info": {
+		"_postman_id": "64af16af-ff67-4aca-b5f7-b7030ddd8005",
+		"name": "Đồ án tốt nghiệp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33857391"
+	},
+	"item": [
+		{
+			"name": "Đăng ký",
+			"item": [
+				{
+					"name": "TC01-p",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "Hải Đăng",
+									"type": "text"
+								},
+								{
+									"key": "user_password",
+									"value": "260303",
+									"type": "text"
+								},
+								{
+									"key": "user_email",
+									"value": "haidang@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "user_isNew",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_role",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_password_confirmation",
+									"value": "260303",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC02-Tenrong-p",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "user_password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "user_email",
+									"value": "abc@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "user_isNew",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_role",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_password_confirmation",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC03-Ten>30-p",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"toitenlafratnhieukytuwhown30ktuco\",\r\n    \"user_password\":\"123456\",\r\n    \"user_password_confirmation\":\"123456\",\r\n    \"user_email\":\"tbach@gmail.com\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC04-Tentrung-p",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"Lê Thanh Bách\",\r\n    \"user_password\":\"123456\",\r\n    \"user_password_confirmation\":\"123456\",\r\n    \"user_email\":\"thbach@gmail.com\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC05-Emailrong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"Khánh Duy\",\r\n    \"user_password\":\"123456\",\r\n    \"user_password_confirmation\":\"123456\",\r\n    \"user_email\":\"\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC06-Email<11",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"Khánh Duy\",\r\n    \"user_password\":\"123456\",\r\n    \"user_password_confirmation\":\"123456\",\r\n    \"user_email\":\"@gmail.com\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC07-Email>30",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"Khánh Duy\",\r\n    \"user_password\":\"123456\",\r\n    \"user_password_confirmation\":\"123456\",\r\n    \"user_email\":\"khanhduybaytoidaymacdutentoiviethoisau@gmail.com\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC08-Emailtrung",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"Khánh Duy\",\r\n    \"user_password\":\"123456\",\r\n    \"user_password_confirmation\":\"123456\",\r\n    \"user_email\":\"thanhbach@gmail.com\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC09-Emailsaidinhdang-F",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const email = pm.request.body.formdata.find(item => item.key === \"user_email\")?.value;\r",
+									"\r",
+									"if (!email) {\r",
+									"    pm.environment.set(\"email_valid\", \"false\");\r",
+									"    console.error(\"❌ Không tìm thấy trường 'email' trong form-data.\");\r",
+									"} else {\r",
+									"    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\r",
+									"    if (!emailRegex.test(email)) {\r",
+									"        pm.environment.set(\"email_valid\", \"false\");\r",
+									"        console.error(\"❌ Email sai định dạng:\", email);\r",
+									"    } else {\r",
+									"        pm.environment.set(\"email_valid\", \"true\");\r",
+									"        console.log(\"✅ Email hợp lệ:\", email);\r",
+									"    }\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const emailValid = pm.environment.get(\"email_valid\");\r",
+									"\r",
+									"pm.test(\"Validate email format\", function () {\r",
+									"    pm.expect(emailValid).to.eql(\"true\", \"Email không hợp lệ\");\r",
+									"});\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "Hưng",
+									"type": "text"
+								},
+								{
+									"key": "user_password",
+									"value": "00000",
+									"type": "text"
+								},
+								{
+									"key": "user_email",
+									"value": "dangtanhungnhe",
+									"type": "text"
+								},
+								{
+									"key": "user_isNew",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_role",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_password_confirmation",
+									"value": "00000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC10-Mkrong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"Khánh Dy\",\r\n    \"user_password\":\"\",\r\n    \"user_password_confirmation\":\"\",\r\n    \"user_email\":\"kkkkk@gmail.com\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC11-Mk<5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"Khả Dy\",\r\n    \"user_password\":\"aaa\",\r\n    \"user_password_confirmation\":\"aaa\",\r\n    \"user_email\":\"khady@gmail.com\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC12-Mk>10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"Khả Dy\",\r\n    \"user_password\":\"aaa0000bbbbb\",\r\n    \"user_password_confirmation\":\"aaa0000bbbbb\",\r\n    \"user_email\":\"khady@gmail.com\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC13-Xnmk#Mk",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"abc12345\",\r\n  \"user_email\": \"abc45@example.com\",\r\n  \"user_password\": \"12345678\",\r\n  \"user_password_confirmation\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC14-XnmkRong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_name\": \"abc123456\",\r\n  \"user_email\": \"abc456@example.com\",\r\n  \"user_password\": \"12345678\",\r\n  \"user_password_confirmation\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC15-SQL_injection_username",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "' OR '1'='1",
+									"type": "text"
+								},
+								{
+									"key": "user_password",
+									"value": "199900",
+									"type": "text"
+								},
+								{
+									"key": "user_email",
+									"value": "huuphuoc@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "user_isNew",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_role",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_password_confirmation",
+									"value": "199900",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC16-SQL_injection_password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "Hữu",
+									"type": "text"
+								},
+								{
+									"key": "user_password",
+									"value": "' OR 'a'='a",
+									"type": "text"
+								},
+								{
+									"key": "user_email",
+									"value": "huuu@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "user_isNew",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_role",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_password_confirmation",
+									"value": "' OR 'a'='a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC17-SQL_injection_useremail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "Hữu P",
+									"type": "text"
+								},
+								{
+									"key": "user_password",
+									"value": "199900",
+									"type": "text"
+								},
+								{
+									"key": "user_email",
+									"value": "' OR '1'='1",
+									"type": "text"
+								},
+								{
+									"key": "user_isNew",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_role",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "user_password_confirmation",
+									"value": "199900",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC18-Botrongnhieudulieu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"\",\r\n    \"user_password\":\"\",\r\n    \"user_password_confirmation\":\"\",\r\n    \"user_email\":\"\",\r\n    \"user_isNew\":\"0\",\r\n    \"user_role\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"A message is included in the response.\", function () {\r",
+							"    let json = pm.response.json();\r",
+							"    pm.expect(json.message).to.exist;\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Đăng nhập",
+			"item": [
+				{
+					"name": "TC01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Trả về token\", function () { \r",
+									"    const json = pm.response.json(); \r",
+									"    pm.expect(json).to.have.property(\"token\");   \r",
+									"    pm.expect(json.token).to.be.a(\"string\"); \r",
+									"    });"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"chin@gmail.com\",\r\n    \"user_password\":\"140603\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC01 Admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"diep@gmail.com\",\r\n    \"user_password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC02-Mksai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"diep@gmail.com\",\r\n    \"user_password\":\"13254\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC03-Mk<5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"diep@gmail.com\",\r\n    \"user_password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC04-Mk>10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"diep@gmail.com\",\r\n    \"user_password\":\"123cvvvveeedueyrtvs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC05-Mkrong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"diep@gmail.com\",\r\n    \"user_password\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC06-Emailsai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"diepvan@gmail.com\",\r\n    \"user_password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC07-Email<11",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"@gmail.com\",\r\n    \"user_password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC08-Email>30",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"abcdtoilalookattheaurababy@gmail.com\",\r\n    \"user_password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC09-Emailrong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"\",\r\n    \"user_password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC10-Emailsaidinhdang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"nguoidisaodanhmanhtrangtronsa\",\r\n    \"user_password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC11-SQL_injection_email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"' OR '1'='1\",\r\n    \"user_password\":\"140603\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC12-SQL_injection_pw",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_email\":\"chin@gmail.com\",\r\n    \"user_password\":\"' OR '1'='1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"A message is included in the response.\", function () {\r",
+							"    let json = pm.response.json();\r",
+							"    pm.expect(json.message).to.exist;\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "QL Sản phẩm",
+			"item": [
+				{
+					"name": "TC01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC02",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Product is correct\", function () {\r",
+									"// var jsonData =pm.response.json();\r",
+									"// console.log(jsonData);\r",
+									"//  var products = jsonData.data; \r",
+									"//     var allBelongToUser = products.every(function(product) {\r",
+									"// return product.product_id === 30; });\r",
+									"// pm.expect(allBelongToUser).to.be.true; });\r",
+									"pm.test(\"Product is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.product_id).to.eql(30);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "333|kJDNwRlIctHgEKZfxl4SGlKlszjbqFM8Vwgj1o9E706057fb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/30",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC03-IDkhongtontai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 294|0ji12nOkB4QLRnbfMh8EJmqzFum4wpW4xY4vTMit6f8424eb",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/1000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC04-IDsaidinhdang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 294|0ji12nOkB4QLRnbfMh8EJmqzFum4wpW4xY4vTMit6f8424eb",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/abb",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"abb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC05-LoctheoDM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Tất cả sản phẩm thuộc danh mục có id là 2\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    console.log(jsonData);\r",
+									"    var products = jsonData.data; // truy cập vào mảng\r",
+									"\r",
+									"    var allCate2 = products.every(function(product) {\r",
+									"        return product.category_id === 2;\r",
+									"    });\r",
+									"    pm.expect(allCate2).to.be.true;\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 294|0ji12nOkB4QLRnbfMh8EJmqzFum4wpW4xY4vTMit6f8424eb",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/categorys/2/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categorys",
+								"2",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC06-SLuong Sản Phẩm Đã Bán",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response is valid JSON\", function () {\r",
+									"  pm.response.to.be.json; // Check if the response is JSON\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 294|0ji12nOkB4QLRnbfMh8EJmqzFum4wpW4xY4vTMit6f8424eb",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/product/statistical",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"statistical"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC07-Them",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "338|kbAcvqYwGpOGEUVOS0Y4TKbqwbTnOtZ5pzIzooJY04df83d9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Kem Nền Mịn Nhẹ Kiềm Dầu Maybelline Fit Me Spf22 #112 Natural Ivory 30Ml",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "postman-cloud:///1f040919-8491-4f90-b874-bfe3af408435"
+								},
+								{
+									"key": "product_price",
+									"value": "229000",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": "KEM NỀN MỊN DA KHÔNG BÓNG NHỜN CHE PHỦ TỰ NHIÊN MAYBELLINE NEW YORK FIT ME MATTE + PORELESS\n\n \n\nCÔNG DỤNG CHÍNH – MAIN FUNCTION:\n\nKem nền kiềm dầu, chống nắng Fit Me dành cho các làn da thường, da dầu và hỗn hợp thiên dầu. Sản phẩm cho một lớp nền mịn mượt, khô thoáng và che phủ “hoàn hảo”. Tiệp với màu da tự nhiên. Bảo vệ làn da trước tác động của ánh nắng.\n\n \n\nCÁCH DÙNG – DIRECTION FOR USE:\n\nDùng bông mút, lấy một lượng phấn nước vừa đủ, vỗ đều khắp mặt và cổ. Có thể phủ thêm phấn trang điểm Maybelline để giữ lớp nền lâu trôi hơn. \n\n \n\n\n \n\n",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC08-Taomoirong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 294|0ji12nOkB4QLRnbfMh8EJmqzFum4wpW4xY4vTMit6f8424eb",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "product_price",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC09-Tensp>255",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "KEM NỀN MỊN DA KHÔNG BÓNG NHỜN CHE PHỦ TỰ NHIÊN MAYBELLINE NEW YORK FIT ME MATTE + PORELESS\n \nCÔNG DỤNG CHÍNH – MAIN FUNCTION:\nKem nền kiềm dầu, chống nắng Fit Me dành cho các làn da thường, da dầu và hỗn hợp thiên dầu. Sản phẩm cho một lớp nền mịn mượt, khô thoáng và che phủ “hoàn hảo”. Tiệp với màu da tự nhiên. Bảo vệ làn da trước tác động của ánh nắng.\n \nCÁCH DÙNG – DIRECTION FOR USE:\nDùng bông mút, lấy một lượng phấn nước vừa đủ, vỗ đều khắp mặt và cổ. Có thể phủ thêm phấn trang điểm Maybelline để giữ lớp nền lâu trôi hơn. \n",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "postman-cloud:///1f040919-8491-4f90-b874-bfe3af408435"
+								},
+								{
+									"key": "product_price",
+									"value": "100000",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": "Nước hoa hồng tinh hoa Pháp lưu hương lâu dài, nhẹ nhàng, quyến rũ",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "aaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC10-Trungten",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 409\", function () {\r",
+									"    pm.response.to.have.status(409);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Tinh dầu dưỡng tóc Moroccanoil Treatment",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "postman-cloud:///1f040919-8491-4f90-b874-bfe3af408435"
+								},
+								{
+									"key": "product_price",
+									"value": "720000",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": "Các sản phẩm của Moroccanoil được biết đến không chỉ ngay lập tức cải thiện tình trạng tóc mà còn làm cho tóc bóng mượt, chắc khỏe dần đều theo thời gian",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC11-Giaspsaidinhdang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Dầu xả Enchanteur 300ml",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "postman-cloud:///1f040919-8491-4f90-b874-bfe3af408435"
+								},
+								{
+									"key": "product_price",
+									"value": "aaa",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": "Nước hoa hồng tinh hoa Pháp lưu hương lâu dài, nhẹ nhàng, quyến rũ",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC12-Giasp>10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Nước tẩy trang TT",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "postman-cloud:///1f040919-8491-4f90-b874-bfe3af408435"
+								},
+								{
+									"key": "product_price",
+									"value": "50000000000000",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": "Nước tẩy trang dịu nhẹ",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC13-Soluongsaidinhdang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Dầu xả Enchanteur 300ml",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "postman-cloud:///1f040919-8491-4f90-b874-bfe3af408435"
+								},
+								{
+									"key": "product_price",
+									"value": "100000",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": "Nước hoa hồng tinh hoa Pháp lưu hương lâu dài, nhẹ nhàng, quyến rũ",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "aaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC14-Motaquadai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Xịt khử mùi ",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "postman-cloud:///1f040919-8491-4f90-b874-bfe3af408435"
+								},
+								{
+									"key": "product_price",
+									"value": "100000",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": " Giới Thiệu\nXịt Khử Mùi Refre Whitening được chiết xuất từ thành phần thiên nhiên lành tính có khả năng khử mùi hiệu quả cho bạn thêm phần tự tin thể hiện phong cách riêng của chính mình. Refre với kết cấu các hạt phấn siêu nhỏ, cực mịn sẽ giúp hút ẩm một cách nhanh chóng đồng thời hỗ trợ se nhỏ lỗ chân lông, giữ cho vùng da dưới cánh tay bạn luôn khô thoáng, sáng mịn suốt cả ngày dài\n \nCÔNG DỤNG CHÍNH – MAIN FUNCTION\n \nKhử mùi hiệu quả\nNgăn tiết mồ hôi vượt trội\nHỗ trợ làm sáng vùng da cánh tay\nGiữ cơ thể thơm ngát suốt cả ngày\nHiện có 6 mùi hương:\nSophis - Hương tinh tế\nAqua Pure - Hương thuần khiết\nSweetie - Hương ngọt ngào\nDeluxe - Hương sang trọng\nBaby Powder - Hương phấn thơm\nIn Love - Hương tình yêu\n \nCÁCH DÙNG – DIRECTION FOR USE \n \n- Lắc kỹ trước khi dùng\n- Xịt vào vùng da dưới cánh tay\n \nThành phần: Chiết xuất lô hội làm giảm mụn, làm dịu da, giảm sưng tấy, dưỡng ẩm, làm se lỗ chân lông và ngăn ngừa các dấu hiệu lão hóa. Ethanol Water, Butylene Glycol, Zinc Phenolsulfonate, Fragrance, Cetrimonium Bromide, Aloe Barbadensis (Aloe) Leaf Extract, Benzalkonium Chloride, Menthol, Phenyl Methicone, Silica,Zinc Oxide, Benzotriazolyl Dodecyl p-Cresol, Magnesium Ascorbyl Phosphate, Glycyrrhiza Uralensis (Licorice) Root Extract\n \nQuy cách: Chai, 30Ml\n\nBảo quản: Nơi khô ráo thoáng mát. Tránh ánh nắng trực tiếp, nơi có nhiệt độ cao\n\nXuất xứ: Nhật Bản\n\nHSD: 3 năm kể từ ngày sản xuất\n \n \n \n- Cho lượng sữa tắm và lòng bàn tay hoặc bông tắm, tạo bọt rồi xoa nhẹ nhàng lên da, tắm lại với nước sạch\n \nThành phần: Xem trên bao bì sản phẩm\n \nQuy cách: Gói, 6Gr\n \nBảo quản: Nơi khô ráo, thoáng mát. Tránh ánh nắng trực tiếp\n \nXuất xứ: Việt Nam\n \nHSD: Xem trên bao bì sản phẩm\n \nLưu ý: Tránh xa tầm tay trẻ em. Nếu sản phẩm dính vào mắt hãy rửa kĩ với nước sạch\n \n---\n \nTHÔNG TIN THÊM - ADDITIONAL INFORMATION\n \n- Để biết thêm thông tin chi tiết về sản phẩm hoặc chương trình khuyến mãi Quý khách hàng vui lòng liên hệ bộ phận CSKH qua Hotline 19004449 hoặc fanpage https://www.facebook.com/eightstorevn để được hỗ trợ\n \n- Nếu quý khách hàng có nhu cầu xuất hóa đơn, vui lòng điền thông tin xuất hóa đơn vào mục Ghi chú đơn hàng, Bộ phận CSKH sẽ gửi hóa đơn điện tử vào email Quý Khách hàng đã đăng ký với Eightstore\n \nEightstore xin chân thành cảm ơn Quý khách!Sữa Tắm Charming Enchanteur 6Gr\nSữa Tắm thương hiệu Enchanteur hương nước hoa nổi tiếng của Pháp chứa dưỡng chất từ kem sữa tươi\n \nCÔNG DỤNG CHÍNH – MAIN FUNCTION \n \n- Sữa tắm Enchanteur Charming với công thức giàu dưỡng chất từ kem sữa tươi và Vitamin B3 giúp làn da giúp làm sáng, đồng thời bổ sung chất dưỡng từ kem sữa tươi dưỡng ẩm, giúp da mềm mịn và tươi trẻ\n- Đặc biệt, với hương nước hoa độc đáo từ Pháp không chỉ giúp bạn gái tự tin và nổi bật với làn da trắng mịn, rạng rỡ mà còn thêm quyến rũ, duyên dáng\n \nCÁCH DÙNG – DIRECTION FOR USE\n \n- Cho lượng sữa tắm và lòng bàn tay hoặc bông tắm, tạo bọt rồi xoa nhẹ nhàng lên da, tắm lại với nước sạch\n \nThành phần: Xem trên bao bì sản phẩm\n \nQuy cách: Gói, 6Gr\n \nBảo quản: Nơi khô ráo, thoáng mát. Tránh ánh nắng trực tiếp\n \nXuất xứ: Việt Nam\n \nHSD: Xem trên bao bì sản phẩm\n \nLưu ý: Tránh xa tầm tay trẻ em. Nếu sản phẩm dính vào mắt hãy rửa kĩ với nước sạch\n \n---\n \nTHÔNG TIN THÊM - ADDITIONAL INFORMATION\n \n- Để biết thêm thông tin chi tiết về sản phẩm hoặc chương trình khuyến mãi Quý khách hàng vui lòng liên hệ bộ phận CSKH qua Hotline 19004449 hoặc fanpage https://www.facebook.com/guardianvn để được hỗ trợ\n \n- Nếu quý khách hàng có nhu cầu xuất hóa đơn, vui lòng điền thông tin xuất hóa đơn vào mục Ghi chú đơn hàng, Bộ phận CSKH sẽ gửi hóa đơn điện tử vào email Quý Khách hàng đã đăng ký với Guardian\n \nGuardian xin chân thành cảm ơn Quý khách! Sữa Tắm Charming Enchanteur 6Gr\nSữa Tắm thương hiệu Enchanteur hương nước hoa nổi tiếng của Pháp chứa dưỡng chất từ kem sữa tươi\n \nCÔNG DỤNG CHÍNH – MAIN FUNCTION \n \n- Sữa tắm Enchanteur Charming với công thức giàu dưỡng chất từ kem sữa tươi và Vitamin B3 giúp làn da giúp làm sáng, đồng thời bổ sung chất dưỡng từ kem sữa tươi dưỡng ẩm, giúp da mềm mịn và tươi trẻ\n- Đặc biệt, với hương nước hoa độc đáo từ Pháp không chỉ giúp bạn gái tự tin và nổi bật với làn da trắng mịn, rạng rỡ mà còn thêm quyến rũ, duyên dáng\n \nCÁCH DÙNG – DIRECTION FOR USE\n \n- Cho lượng sữa tắm và lòng bàn tay hoặc bông tắm, tạo bọt rồi xoa nhẹ nhàng lên da, tắm lại với nước sạch\n \nThành phần: Xem trên bao bì sản phẩm\n \nQuy cách: Gói, 6Gr\n \nBảo quản: Nơi khô ráo, thoáng mát. Tránh ánh nắng trực tiếp\n \nXuất xứ: Việt Nam\n \nHSD: Xem trên bao bì sản phẩm\n \nLưu ý: Tránh xa tầm tay trẻ em. Nếu sản phẩm dính vào mắt hãy rửa kĩ với nước sạch\n \n---\n \nTHÔNG TIN THÊM - ADDITIONAL INFORMATION\n \n- Để biết thêm thông tin chi tiết về sản phẩm hoặc chương trình khuyến mãi Quý khách hàng vui lòng liên hệ bộ phận CSKH qua Hotline 19004449 hoặc fanpage https://www.facebook.com/guardianvn để được hỗ trợ\n \n- Nếu quý khách hàng có nhu cầu xuất hóa đơn, vui lòng điền thông tin xuất hóa đơn vào mục Ghi chú đơn hàng, Bộ phận CSKH sẽ gửi hóa đơn điện tử vào email Quý Khách hàng đã đăng ký với Guardian\n \nGuardian xin chân thành cảm ơn Quý khách! Sữa Tắm Charming Enchanteur 6Gr\nSữa Tắm thương hiệu Enchanteur hương nước hoa nổi tiếng của Pháp chứa dưỡng chất từ kem sữa tươi\n \nCÔNG DỤNG CHÍNH – MAIN FUNCTION \n \n- Sữa tắm Enchanteur Charming với công thức giàu dưỡng chất từ kem sữa tươi và Vitamin B3 giúp làn da giúp làm sáng, đồng thời bổ sung chất dưỡng từ kem sữa tươi dưỡng ẩm, giúp da mềm mịn và tươi trẻ\n- Đặc biệt, với hương nước hoa độc đáo từ Pháp không chỉ giúp bạn gái tự tin và nổi bật với làn da trắng mịn, rạng rỡ mà còn thêm quyến rũ, duyên dáng\n \nCÁCH DÙNG – DIRECTION FOR USE\n \n- Cho lượng sữa tắm và lòng bàn tay hoặc bông tắm, tạo bọt rồi xoa nhẹ nhàng lên da, tắm lại với nước sạch\n \nThành phần: Xem trên bao bì sản phẩm\n \nQuy cách: Gói, 6Gr\n \nBảo quản: Nơi khô ráo, thoáng mát. Tránh ánh nắng trực tiếp\n \nXuất xứ: Việt Nam\n \nHSD: Xem trên bao bì sản phẩm\n \nLưu ý: Tránh xa tầm tay trẻ em. Nếu sản phẩm dính vào mắt hãy rửa kĩ với nước sạch\n \n---\n \nTHÔNG TIN THÊM - ADDITIONAL INFORMATION\n \n- Để biết thêm thông tin chi tiết về sản phẩm hoặc chương trình khuyến mãi Quý khách hàng vui lòng liên hệ bộ phận CSKH qua Hotline 19004449 hoặc fanpage https://www.facebook.com/guardianvn để được hỗ trợ\n \n- Nếu quý khách hàng có nhu cầu xuất hóa đơn, vui lòng điền thông tin xuất hóa đơn vào mục Ghi chú đơn hàng, Bộ phận CSKH sẽ gửi hóa đơn điện tử vào email Quý Khách hàng đã đăng ký với Guardian\n \nGuardian xin chân thành cảm ơn Quý khách! Sữa Tắm Charming Enchanteur 6Gr\nSữa Tắm thương hiệu Enchanteur hương nước hoa nổi tiếng của Pháp chứa dưỡng chất từ kem sữa tươi\n \nCÔNG DỤNG CHÍNH – MAIN FUNCTION \n \n- Sữa tắm Enchanteur Charming với công thức giàu dưỡng chất từ kem sữa tươi và Vitamin B3 giúp làn da giúp làm sáng, đồng thời bổ sung chất dưỡng từ kem sữa tươi dưỡng ẩm, giúp da mềm mịn và tươi trẻ\n- Đặc biệt, với hương nước hoa độc đáo từ Pháp không chỉ giúp bạn gái tự tin và nổi bật với làn da trắng mịn, rạng rỡ mà còn thêm quyến rũ, duyên dáng\n \nCÁCH DÙNG – DIRECTION FOR USE\n \n- Cho lượng sữa tắm và lòng bàn tay hoặc bông tắm, tạo bọt rồi xoa nhẹ nhàng lên da, tắm lại với nước sạch\n \nThành phần: Xem trên bao bì sản phẩm\n \nQuy cách: Gói, 6Gr\n \nBảo quản: Nơi khô ráo, thoáng mát. Tránh ánh nắng trực tiếp\n \nXuất xứ: Việt Nam\n \nHSD: Xem trên bao bì sản phẩm\n \nLưu ý: Tránh xa tầm tay trẻ em. Nếu sản phẩm dính vào mắt hãy rửa kĩ với nước sạch\n \n---\n \nTHÔNG TIN THÊM - ADDITIONAL INFORMATION\n \n- Để biết thêm thông tin chi tiết về sản phẩm hoặc chương trình khuyến mãi Quý khách hàng vui lòng liên hệ bộ phận CSKH qua Hotline 19004449 hoặc fanpage https://www.facebook.com/guardianvn để được hỗ trợ\n \n- Nếu quý khách hàng có nhu cầu xuất hóa đơn, vui lòng điền thông tin xuất hóa đơn vào mục Ghi chú đơn hàng, Bộ phận CSKH sẽ gửi hóa đơn điện tử vào email Quý Khách hàng đã đăng ký với Guardian\n \nGuardian xin chân thành cảm ơn Quý khách!",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC15-Update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\": \"Nước hoa hồng Simple 100ml\",\r\n    \"product_img\": \"1748966610_co do sao vang.jpg\",\r\n    \"product_price\": \"89000\",\r\n    \"product_dsc\": \"Dung dịch chăm sóc da dịu nhẹ\",\r\n    \"category_id\": 4,\r\n    \"supplier_id\": 4,\r\n    \"product_quantity\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/52",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC16-Update trungten",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\": \"Sữa rửa mặt Hazeline Chiết Xuất Thiên Nhiên 100g\",\r\n    \"product_img\": \"1748966610_co do sao vang.jpg\",\r\n    \"product_price\": \"89000\",\r\n    \"product_dsc\": \"Dung dịch chăm sóc da dịu nhẹ\",\r\n    \"category_id\": 2,\r\n    \"supplier_id\": 4,\r\n    \"product_quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/52",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC17-Upadate thieu",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_name\": \"\",\r\n    \"product_img\": \"1748966610_co do sao vang.jpg\",\r\n    \"product_price\": \"89000\",\r\n    \"product_dsc\": \"Dung dịch chăm sóc da dịu nhẹ\",\r\n    \"category_id\": 2,\r\n    \"supplier_id\": 4,\r\n    \"product_quantity\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products/52",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC18-Del",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Product is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.product_id).to.eql(55);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/55",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC19-Del-IDkhongtontai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "329|HszCYw1hLxrF0BiIp7qpCNMiAqBczph6lTsJ7qU70c0c2b62",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 29|HOj5OgmNSeM7bLtcravuUpGbPvRv1NeLQIac0MGa689841c6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/100",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC20-Tokenuser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "328|oTDlmM4jffeYWyCFJA4eWUwDGJ4XpRtuJi3S2WYC24912b08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products/55",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC21-Khongguitoken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC22-Tokensai/hethan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "29|HOj5OgmNSeM7bLtcravuUpGbPvRv1NeLQIac0MGa689841c6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC23-SQL_Injection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "329|HszCYw1hLxrF0BiIp7qpCNMiAqBczph6lTsJ7qU70c0c2b62",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 182|erlAQYi1w9iYJtGn227ARMwt6mplv2zaDrQ8XA0de8023e5d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "' OR 1=1 --",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "postman-cloud:///1f040919-8491-4f90-b874-bfe3af408435"
+								},
+								{
+									"key": "product_price",
+									"value": "' OR 1=1 --",
+									"type": "text"
+								},
+								{
+									"key": "product_dsc",
+									"value": "' OR 1=1 --\n \n\n",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "supplier_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "' OR 1=1 --",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"A message is included in the response.\", function () {\r",
+							"    let json = pm.response.json();\r",
+							"    pm.expect(json.message).to.exist;\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "QL Giỏ hàng",
+			"item": [
+				{
+					"name": "TC01-Admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "329|HszCYw1hLxrF0BiIp7qpCNMiAqBczph6lTsJ7qU70c0c2b62",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 179|ml93aULPIgdDLWQPEZD0zb6YATWkx9IU1oxJSXvl3abf4f4c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC01.1-F-User(chi hien thi san pham trong gio cua user do)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									" pm.test(\"User đăng nhập có id là 38\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    console.log(jsonData);\r",
+									"    var users = jsonData.data; // truy cập vào mảng\r",
+									"\r",
+									"    var allBelongToUser = users.every(function(user) {\r",
+									"        return user.user_id === 38;\r",
+									"    });\r",
+									"    pm.expect(allBelongToUser).to.be.true;\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "328|oTDlmM4jffeYWyCFJA4eWUwDGJ4XpRtuJi3S2WYC24912b08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 179|ml93aULPIgdDLWQPEZD0zb6YATWkx9IU1oxJSXvl3abf4f4c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC02-Them",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Kiểm tra mã phản hồi là 200 OK\", function () { \r",
+									"    pm.response.to.have.status(200); \r",
+									"}); \r",
+									"pm.test(\"Kiểm tra sản phẩm hiển thị trong giỏ hàng\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData.data).to.have.property('product_id', 25); // Fixed the test to check product_id directly\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "325|VGewRprVv2qnuD5gDBazti5EsYJdZcludiHyO8zO12ac4562",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "38",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "195000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC03-ThemSL=0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Kiểm tra mã phản hồi là 400\", function () { \r",
+									"    pm.response.to.have.status(400); \r",
+									"}); \r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "325|VGewRprVv2qnuD5gDBazti5EsYJdZcludiHyO8zO12ac4562",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "38",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "555000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC04-ThemSPdacotronggio",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Kiểm tra mã phản hồi là 200 OK\", function () { \r",
+									"    pm.response.to.have.status(200); \r",
+									"}); \r",
+									"pm.test(\"Kiểm tra sản phẩm hiển thị trong giỏ hàng\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData.data).to.have.property('product_id', 35); // Fixed the test to check product_id directly\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "325|VGewRprVv2qnuD5gDBazti5EsYJdZcludiHyO8zO12ac4562",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "38",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "550000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC05-ThemSP_vao_user_khac",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Kiểm tra mã phản hồi là 403 \", function () { \r",
+									"    pm.response.to.have.status(403); \r",
+									"}); \r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "325|VGewRprVv2qnuD5gDBazti5EsYJdZcludiHyO8zO12ac4562",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "179000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC06-Themkhongguitoken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "439000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC07-ThemSpHethang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Kiểm tra mã phản hồi là 400\", function () { \r",
+									"    pm.response.to.have.status(400); \r",
+									"}); \r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "325|VGewRprVv2qnuD5gDBazti5EsYJdZcludiHyO8zO12ac4562",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "38",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "55",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "100000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC08-UpdateSL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "326|69WfC1hkYrsFrlGYubYP3k2T4iMqEWh00nuBZoUA1a84e021",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 29|HOj5OgmNSeM7bLtcravuUpGbPvRv1NeLQIac0MGa689841c6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "38",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "550000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts/67",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC09-UpdateSL=0",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "326|69WfC1hkYrsFrlGYubYP3k2T4iMqEWh00nuBZoUA1a84e021",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 29|HOj5OgmNSeM7bLtcravuUpGbPvRv1NeLQIac0MGa689841c6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "38",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts/67",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC10-Update_sp_khongcotronggio",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "326|69WfC1hkYrsFrlGYubYP3k2T4iMqEWh00nuBZoUA1a84e021",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 29|HOj5OgmNSeM7bLtcravuUpGbPvRv1NeLQIac0MGa689841c6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "38",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "399000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts/67",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC11-Update_sp_cua_userkhac",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "326|69WfC1hkYrsFrlGYubYP3k2T4iMqEWh00nuBZoUA1a84e021",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 29|HOj5OgmNSeM7bLtcravuUpGbPvRv1NeLQIac0MGa689841c6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "cart_quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cart_totalmoney",
+									"value": "550000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/carts/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC12-ChonSpDeMua",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "326|69WfC1hkYrsFrlGYubYP3k2T4iMqEWh00nuBZoUA1a84e021",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cart_ids\":[66,67]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/carts/select-to-buy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"select-to-buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC13-ChonSp_tronggiocua_userkhacDeMua",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "326|69WfC1hkYrsFrlGYubYP3k2T4iMqEWh00nuBZoUA1a84e021",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cart_ids\":[65,67]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/carts/select-to-buy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"select-to-buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC14-Del",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Cart is deleted\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.cart_id).to.eql(71);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "325|VGewRprVv2qnuD5gDBazti5EsYJdZcludiHyO8zO12ac4562",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/carts/71",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC15-Del_giohang_userkhac",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "325|VGewRprVv2qnuD5gDBazti5EsYJdZcludiHyO8zO12ac4562",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/carts/14",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC16-Del ID khongtontai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "325|VGewRprVv2qnuD5gDBazti5EsYJdZcludiHyO8zO12ac4562",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/carts/1000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC17_DeltoanboGH",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "341|FlyYJ1ypoxsj9PizXJOr378nZYUI1mTOmXL16bej6d97b71d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/carts/delete-all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts",
+								"delete-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC18-Tokensai/hethan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 154|xTYMMj00SQK5snHdfvWT9vulygkDgRA85yxuVKeC4e4e531e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/carts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"A message is included in the response.\", function () {\r",
+							"    let json = pm.response.json();\r",
+							"    pm.expect(json.message).to.exist;\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "QL Đơn hàng",
+			"item": [
+				{
+					"name": "TC01",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 186|mPaPkODtNEXMHbeFGaQbWtLDJ2zjIdtalkKM5JXed1697682",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC02",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Order is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.order_id).to.eql(12);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 22|zQmOpijJcyJr1IeUI9YCCHcNSoZlxLST10rUrjXDc40249a8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/orders/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC03-IDkhongtontai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2025-06-06 12:33:00",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "200000",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/1000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC04_IDsaidinhdang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2025-06-06 12:33:00",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "200000",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/abb",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"abb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC05-OrderDetails_of_Orderid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									" pm.test(\"Chi tiết đơn hàng của đơn hàng có id là 3\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    console.log(jsonData);\r",
+									"    var orders = jsonData.data; // truy cập vào mảng\r",
+									"\r",
+									"    var allBelongTollBelongToVoucher2 = orders.every(function(order) {\r",
+									"        return order.order_id === 3;\r",
+									"    });\r",
+									"    pm.expect(allBelongTollBelongToVoucher2).to.be.true;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 186|mPaPkODtNEXMHbeFGaQbWtLDJ2zjIdtalkKM5JXed1697682",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/3/orderDetail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"3",
+								"orderDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC06-Status_Orderid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Order is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.order_id).to.eql(20);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 186|mPaPkODtNEXMHbeFGaQbWtLDJ2zjIdtalkKM5JXed1697682",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/20/status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"20",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC07-Them",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2025-06-28 01:50:58",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "240000",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "34",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "giao hàng cẩn thận",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC08-Themthieudulieu",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC09-Ngaydat_saidinhdang-F",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2026-25-25 14:50:53",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "190000",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC10-Tongtien_saidinhdang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2025-06-06",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "kkkkk",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC11-IDreceiver_saidinhdang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2025-06-06",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "219000",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "-2",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC12-IDshipping_saidinhdang Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2025-06-06",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "130000",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "-3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC13-IDuser_saidinhdang",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2025-06-06",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "149000",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "dddd",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC14-Huy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Order is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data.order_id).to.eql(27);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 186|mPaPkODtNEXMHbeFGaQbWtLDJ2zjIdtalkKM5JXed1697682",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/orders/27",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC15-Huythatbai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders/1000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC16-Khongguitoken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "2025-06-06 12:33:00",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "200000",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "ship nhắn tin zalo giúp iem",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC17-SQL Injection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "324|sdb6zZz27e5VJah9aSzeuGENgq4Kmz8SpP7B5xxX45264a48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 108|n2L71bH66VsbZH4ahh2QintgLRmTiGOOQLpDdClZc0590966",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_date",
+									"value": "a' OR '1'='1",
+									"type": "text"
+								},
+								{
+									"key": "order_status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "order_totalmoney",
+									"value": "a' OR '1'='1",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "a' OR '1'='1",
+									"type": "text"
+								},
+								{
+									"key": "order_content",
+									"value": "a' OR '1'='1",
+									"type": "text"
+								},
+								{
+									"key": "receiver_id",
+									"value": "a' OR '1'='1",
+									"type": "text"
+								},
+								{
+									"key": "shipping_id",
+									"value": "' OR 1=1 --",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"A message is included in the response.\", function () {\r",
+							"    let json = pm.response.json();\r",
+							"    pm.expect(json.message).to.exist;\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Tìm kiếm",
+			"item": [
+				{
+					"name": "TC01-Hople",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search=Serum ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Serum "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC02-KTontai",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search= xycbsva ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": " xycbsva "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC03-Rong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search=  ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "  "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC04-Kitudacbiet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search= $^#%^ ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": " $^"
+								}
+							],
+							"hash": "%^ "
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC05-ChuhoaChuthuong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search= sữA Rửa MẶt ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": " sữA Rửa MẶt "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC06-CodauKhongdau",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search= sua rua mat ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": " sua rua mat "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC07-Khoangtrangthua-F",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 422\", function () {\r",
+									"    pm.response.to.have.status(422);\r",
+									"});\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search= sua     rua    mat  ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": " sua     rua    mat  "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC08-Daibatthuong",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\n",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC09-Timkiemvoiso",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search=12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC10-SQL_Injection-F",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"// pm.test(\"Tất cả sản phẩm có tên chứa 'Serum'\", function () {\r",
+									"//     var jsonData = pm.response.json();\r",
+									"\r",
+									"//     pm.expect(jsonData).to.have.property(\"data\");\r",
+									"//     pm.expect(jsonData.data).to.be.an(\"array\");\r",
+									"\r",
+									"//     jsonData.data.forEach(function (product) {\r",
+									"//         pm.expect(product).to.have.property(\"product_name\");\r",
+									"//         pm.expect(product.product_name.toLowerCase()).to.include(\"Serum\");\r",
+									"//     });\r",
+									"// });\r",
+									"pm.test(\"Kiểm tra dữ liệu trả về đúng sản phẩm hoặc dữ liệu liên quan\", function () { \r",
+									"    let jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData).to.not.be.empty;  \r",
+									"    });\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/products_search?search=a' OR '1'='1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products_search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "a' OR '1'='1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"A message is included in the response.\", function () {\r",
+							"    let json = pm.response.json();\r",
+							"    pm.expect(json.message).to.exist;\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
